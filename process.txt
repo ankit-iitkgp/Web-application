@@ -1,0 +1,7 @@
+Hi,
+
+We have got great news for you. Your product is in your price range. Shop now at Flipkart.
+Now its price is ${PROD_P}
+
+Yours,
+Ankit Saurabh

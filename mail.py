@@ -15,6 +15,7 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 #using flask mail
+#setting all the configurations.
 mail=Mail(app)
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
@@ -40,6 +41,7 @@ def yourscraper():
 
 @app.route('/sendMail<username>')
 def index(username):
+	#defining the e-mail.
 	msg = Message('Alert',sender = 'ankitsaurabh.iitkgp@gmail.com', recipients = [username])
   	msg.body = "Hurry up! your product is within your range"
    	mail.send(msg)
@@ -56,6 +58,7 @@ def final_page():
 		print scrape(product)
 		
 		if scrape(product)<my_price:
+			#starting the process of sending mail.Since the condition is satisfied.
 			return redirect(url_for('index', username=user))
 		else:
 			return render_template('failure.html')

@@ -1,6 +1,6 @@
 # Web-application
 Making a web application to alert the user when the price of his desired product is within his range.
-Although, it  is a single-time run.To use it you have to install flask, BeautifulScoup and smtplib.
+Although, it  is a single-time run.To use it you have to install flask, BeautifulScoup and Flask-mail.
 
 To run the code, Save all the .html file in a folder named templates since they are returned through render_template.
 Run mail.py to send e-mail.
